@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+
+   
+<div class="sidebar">
+    <h2>EmployeeHub</h2>
+    <p onclick="showDashboard()">Dashboard</p>
+    <p onclick="showEmployees()">Employees</p>
+    <p onclick="showDepartments()">Departments</p>
+</div>
+
+    <div class="main">
+        <header>
+            <h1>Employee Management System</h1>
+            <p>Manage your employees in one place</p>
+        </header>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <h2 id="total">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Departments</h3>
+                <h2>5</h2>
+            </div>
+
+            <div class="card">
+                <h3>System Status</h3>
+                <h2>Active</h2>
+            </div>
+        </div>
+
+        <section class="employee-section">
+         
+<div class="section-heading">
+    <h2>Employee Directory</h2>
+
+    <div>
+        <input type="text" id="search"
+               placeholder="Search employee...">
+<select id="department">
+            <option value="All">All Departments</option>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+
+        <button onclick="showForm()">Add Employee</button>
+    </div>
+</div>
+
+<div id="employee-form" style="display: none;">
+    <input type="text" id="emp-name" placeholder="Employee Name">
+    <input type="number" id="emp-salary" placeholder="Salary">
+    <input type="number" id="emp-age" placeholder="Age">
+
+    <button onclick="addEmployee()">Save Employee</button>
+    <button onclick="hideForm()">Cancel</button>
+</div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="employee-list">
+        <tr>
+            <td colspan="5">Loading employees...</td>
+        </tr>
+    </tbody>
+</table>
+
+        </section>
+        <section class="department-section" id="department-page"
+         style="display: none;">
+
+    <h1>Departments</h1>
+    <p>Manage your company departments</p>
+
+    <div class="department-cards" id="departments-list"></div>
+
+</section>
+    </div>
+
+<div id="employee-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Employee Details</h2>
+        <div id="employee-details"></div>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+    <script src="employee.js"></script>
+</body>
+</html>

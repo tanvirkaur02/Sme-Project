@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To-Do Manager</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <h2>✓ TaskFlow</h2>
+
+        <button class="nav-btn active" onclick="showTasks('all')">▦ All Tasks</button>
+        <button class="nav-btn" onclick="showAddForm()">＋ Add Task</button>
+        <button class="nav-btn" onclick="showTasks('completed')">✓ Completed</button>
+        <button class="nav-btn" onclick="showTasks('pending')">◷ Pending</button>
+
+        <div class="sidebar-bottom">
+            <p>Stay focused.</p>
+            <p>Get things done.</p>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1 id="page-title">My Tasks</h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+            <button class="primary-btn" onclick="showAddForm()">+ Add Task</button>
+        </header>
+
+        <section id="dashboard">
+            <div class="stats">
+                <div class="stat-card">
+                    <p>Total Tasks</p>
+                    <h2 id="total">0</h2>
+                </div>
+                <div class="stat-card">
+                    <p>Completed</p>
+                    <h2 id="completed">0</h2>
+                </div>
+                <div class="stat-card">
+                    <p>Pending</p>
+                    <h2 id="pending">0</h2>
+                </div>
+            </div>
+
+            <div class="task-panel">
+                <div class="panel-heading">
+                    <h2 id="list-title">All Tasks</h2>
+                    <input id="search" type="text" placeholder="Search tasks...">
+              
+<select id="priority-filter" onchange="filterByPriority()">
+    <option value="all">All Priorities</option>
+    <option value="High">High Priority</option>
+    <option value="Medium">Medium Priority</option>
+    <option value="Low">Low Priority</option>
+</select>
+
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Done</th>
+                                <th>Task Title</th>
+                                <th>Priority</th>
+                                <th>Due Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="task-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="task-form-section" class="task-panel" hidden>
+            <h2 id="form-heading">Add New Task</h2>
+
+            <form id="task-form">
+                <label for="task-title">Task Title</label>
+                <input id="task-title" type="text"
+                       placeholder="Enter task title" required>
+
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <label for="task-date">Due Date</label>
+                <input id="task-date" type="date">
+
+                <label for="task-description">Description (Optional)</label>
+                <textarea id="task-description"
+                          placeholder="Enter task description"></textarea>
+
+                <div class="form-actions">
+                    <button class="primary-btn" type="submit">Save Task</button>
+                    <button class="secondary-btn" type="button"
+                            onclick="showTasks('all')">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</div>
+
+<script src="todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fff5f8;
+    color: #482936;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== Pink Rose Sidebar ===== */
+
+.sidebar {
+    width: 245px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #762747, #a83f67);
+    color: white;
+    padding: 30px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar h2 {
+    color: #ffe0eb;
+    font-size: 25px;
+    margin: 0 0 30px 8px;
+}
+
+.nav-btn {
+    width: 100%;
+    text-align: left;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #ffe8f0;
+    font-weight: 600;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #d45b87;
+    color: white;
+    transform: translateX(3px);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 18px 10px 5px;
+    color: #fbd0df;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ===== Main Area ===== */
+
+.main {
+    flex: 1;
+    min-width: 0;
+    padding: 38px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #762747;
+}
+
+.topbar p {
+    color: #997b88;
+}
+
+/* ===== Buttons ===== */
+
+.primary-btn {
+    border: none;
+    border-radius: 10px;
+    background: #c44778;
+    color: white;
+    padding: 13px 20px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px #c4477820;
+}
+
+.primary-btn:hover {
+    background: #a82f60;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #f0c8d8;
+    border-radius: 10px;
+    background: #fff7fa;
+    color: #873452;
+    padding: 12px 18px;
+}
+
+.secondary-btn:hover {
+    background: #ffe6ef;
+}
+
+/* ===== Statistics Cards ===== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 17px;
+    border: 1px solid #f3dce5;
+    box-shadow: 0 8px 25px #7627470b;
+}
+
+.stat-card p {
+    color: #997b88;
+    margin-bottom: 13px;
+}
+
+.stat-card h2 {
+    color: #c44778;
+    font-size: 32px;
+}
+
+/* ===== Task List Panel ===== */
+
+.task-panel {
+    background: white;
+    padding: 26px;
+    border: 1px solid #f3dce5;
+    border-radius: 17px;
+    box-shadow: 0 8px 25px #7627470b;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.panel-heading h2,
+.task-panel > h2 {
+    font-size: 22px;
+    color: #762747;
+}
+
+/* ===== Input Fields ===== */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #edcfdb;
+    border-radius: 10px;
+    background: #fffafd;
+    color: #482936;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #b49aa5;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #d45b87;
+    box-shadow: 0 0 0 3px #d45b871c;
+}
+
+#search {
+    width: 240px;
+    max-width: 100%;
+}
+
+/* ===== Task Table ===== */
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background: #fff0f5;
+    color: #873452;
+    padding: 16px 12px;
+    font-size: 13px;
+}
+
+td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #f6e8ee;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #fff9fb;
+}
+
+/* ===== Priority Labels ===== */
+
+.priority {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.priority.High {
+    background: #ffe0e5;
+    color: #bd2948;
+}
+
+.priority.Medium {
+    background: #fff0d9;
+    color: #986000;
+}
+
+.priority.Low {
+    background: #fce7f3;
+    color: #a33770;
+}
+
+/* ===== Task Action Buttons ===== */
+
+.action-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 11px;
+    margin: 2px;
+}
+
+.edit-btn {
+    background: #fce7f3;
+    color: #a33770;
+}
+
+.edit-btn:hover {
+    background: #f8cde0;
+}
+
+.delete-btn {
+    background: #fff0f0;
+    color: #c53b52;
+}
+
+.delete-btn:hover {
+    background: #ffdce2;
+}
+
+.task-done {
+    accent-color: #c44778;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.completed-title {
+    text-decoration: line-through;
+    color: #b29da7;
+}
+
+/* ===== Add Task Form ===== */
+
+#task-form-section[hidden],
+#dashboard[hidden] {
+    display: none;
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+#task-form label {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #873452;
+}
+
+#task-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 195px;
+    }
+
+    .main {
+        padding: 22px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main {
+        padding: 16px;
+    }
+
+    .topbar,
+    .panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .task-panel {
+        padding: 16px;
+    }
+}
+/* Progress Card */
+.progress-card {
+    background: white;
+    padding: 24px;
+    margin: 25px 0;
+    border-radius: 18px;
+    border: 1px solid #f5d5e0;
+    box-shadow: 0 5px 20px rgba(130, 40, 75, 0.06);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.progress-info h3 {
+    color: #81294e;
+    margin: 0;
+    font-size: 20px;
+}
+
+#progress-percentage {
+    color: #c63f72;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #fbe5ed;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #d65b8a, #8b3159);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.progress-card > p {
+    color: #987687;
+    font-size: 14px;
+    margin: 14px 0 0;
+}
