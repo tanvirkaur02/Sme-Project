@@ -1,79 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My SME Projects</title>
+
+    <title>My SME Projects | Web Development Portfolio</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #96e6a1;
-            text-align: center;
-            padding: 30px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        h1 {
-            color: #14532d;
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0fdf4;
+            color: #1f2937;
+        }
+
+        header {
+            background: linear-gradient(135deg, #065f46, #10b981);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 16px;
         }
 
         .container {
-            max-width: 600px;
-            margin: auto;
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
         }
 
-        .project {
+        h2 {
+            color: #065f46;
+            margin: 30px 0 20px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
             background: white;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 22px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px #0002;
+            box-shadow: 0 4px 12px #00000012;
+            transition: 0.3s;
         }
 
-        a {
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px #00000020;
+        }
+
+        .card h3 {
+            color: #047857;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            margin-bottom: 18px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .btn {
             display: inline-block;
-            background: #16845b;
+            background: #059669;
             color: white;
-            padding: 10px 20px;
             text-decoration: none;
+            padding: 10px 16px;
             border-radius: 6px;
         }
 
-        a:hover {
-            background: #105c40;
+        .btn:hover {
+            background: #065f46;
+        }
+
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 12px;
+        }
+
+        .file-link {
+            display: block;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #065f46;
+            border: 1px solid #d1fae5;
+            transition: 0.2s;
+            overflow-wrap: anywhere;
+        }
+
+        .file-link:hover {
+            background: #d1fae5;
+            border-color: #059669;
+        }
+
+        footer {
+            text-align: center;
+            background: #064e3b;
+            color: white;
+            padding: 22px;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>My SME Projects</h1>
-    <p>Welcome to my web development projects!</p>
+    <header>
+        <h1>My SME Projects</h1>
+        <p>My Web Development Practice & Projects Portfolio</p>
+    </header>
 
-    <div class="container">
+    <main class="container">
 
-        <div class="project">
-            <h2>Employee Management System</h2>
-            <a href="./Employee%20Management%20System/employee.html">
-                View Project
-            </a>
+        <h2>📁 My Main Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Employee Management System</h3>
+                <p>A project for managing employee information.</p>
+                <a class="btn"
+                   href="./Employee%20Management%20System/employee.html">
+                    View Project
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Student Portal</h3>
+                <p>A project for viewing student information.</p>
+                <a class="btn"
+                   href="./Student%20Portal/student1.html">
+                    View Project
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>To-Do Task List</h3>
+                <p>A simple task management project.</p>
+                <a class="btn"
+                   href="./todo%20task%20list/todo.html">
+                    View Project
+                </a>
+            </div>
+
         </div>
 
-        <div class="project">
-            <h2>Student Portal</h2>
-            <a href="./Student%20Portal/student1.html">
-                View Project
-            </a>
+        <h2>💻 My HTML Practice Files</h2>
+
+        <div class="file-list">
+
+            <a class="file-link" href="./Sign.html">Sign.html → Open File</a>
+
+            <a class="file-link" href="./agecategory.html">agecategory.html → Open File</a>
+
+            <a class="file-link" href="./array.html">array.html → Open File</a>
+
+            <a class="file-link" href="./canteen.html">canteen.html → Open File</a>
+
+            <a class="file-link" href="./days.html">days.html → Open File</a>
+
+            <a class="file-link" href="./description.html">description.html → Open File</a>
+
+            <a class="file-link" href="./display.html">display.html → Open File</a>
+
+            <a class="file-link" href="./dowhile.html">dowhile.html → Open File</a>
+
+            <a class="file-link" href="./evenodd.html">evenodd.html → Open File</a>
+
+            <a class="file-link" href="./factorial.html">factorial.html → Open File</a>
+
+            <a class="file-link" href="./fibonacci%20series.html">fibonacci series.html → Open File</a>
+
+            <a class="file-link" href="./formvalid.html">formvalid.html → Open File</a>
+
+            <a class="file-link" href="./jqueryselector.html">jqueryselector.html → Open File</a>
+
+            <a class="file-link" href="./login.html">login.html → Open File</a>
+
+            <a class="file-link" href="./loop.html">loop.html → Open File</a>
+
+            <a class="file-link" href="./min.html">min.html → Open File</a>
+
+            <a class="file-link" href="./negpos.html">negpos.html → Open File</a>
+
+            <a class="file-link" href="./para.html">para.html → Open File</a>
+
+            <a class="file-link" href="./practice.html">practice.html → Open File</a>
+
+            <a class="file-link" href="./search.html">search.html → Open File</a>
+
+            <a class="file-link" href="./select.html">select.html → Open File</a>
+
+            <a class="file-link" href="./signup.html">signup.html → Open File</a>
+
+            <a class="file-link" href="./student.html">student.html → Open File</a>
+
+            <a class="file-link" href="./sum100.html">sum100.html → Open File</a>
+
+            <a class="file-link" href="./sumarray.html">sumarray.html → Open File</a>
+
+            <a class="file-link" href="./sumeven.html">sumeven.html → Open File</a>
+
+            <a class="file-link" href="./test4.html">test4.html → Open File</a>
+
+            <a class="file-link" href="./testa.html">testa.html → Open File</a>
+
+            <a class="file-link" href="./vowel.html">vowel.html → Open File</a>
+
+            <a class="file-link" href="./while.html">while.html → Open File</a>
+
         </div>
 
-        <div class="project">
-            <h2>To-Do Task List</h2>
-            <a href="./todo%20task%20list/todo.html">
-                View Project
-            </a>
-        </div>
+    </main>
 
-    </div>
+    <footer>
+        <p>My SME Projects | Web Development Portfolio</p>
+    </footer>
 
 </body>
 </html>
+         
