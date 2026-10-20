@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disable Button</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<button id="btn">Click Me</button>
+<button id="disable">Disable First Button</button>
+
+<script>
+$(document).ready(function() {
+    $("#disable").click(function() {
+        $("#btn").prop("disabled", true);
+    });
+});
+</script>
+
+</body>
+</html>d

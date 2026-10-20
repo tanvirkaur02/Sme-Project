@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font Size</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<p id="text">Welcome to jQuery!</p>
+
+<button id="btn">Increase Font Size</button>
+
+<script>
+$(document).ready(function() {
+    $("#btn").click(function() {
+        $("#text").css("font-size", "30px");
+    });
+});
+</script>
+
+</body>
+</html>

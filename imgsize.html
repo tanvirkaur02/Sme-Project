@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Image Size</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h2>Change Image Size</h2>
+
+    <img id="myImage"
+         src="https://tse4.mm.bing.net/th/id/OIP.ayACpdslq2Oq9hSUQnfMWQHaF1?r=0&pid=Api&h=220&P=0"
+         width="200"
+         alt="Sample Image">
+
+    <br><br>
+
+    <button id="changeSize">Increase Image Size</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#changeSize").click(function() {
+                $("#myImage").css({
+                    "width": "300px",
+                    "height": "200px"
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

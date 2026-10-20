@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hide Image</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<img id="img"
+     src="https://tse4.mm.bing.net/th/id/OIP.ayACpdslq2Oq9hSUQnfMWQHaF1?r=0&pid=Api&h=220&P=0"
+     alt="Sample Image">
+
+<br><br>
+
+<button id="btn">Hide Image</button>
+
+<script>
+$(document).ready(function() {
+    $("#btn").click(function() {
+        $("#img").hide();
+    });
+});
+</script>
+
+</body>
+</html>
